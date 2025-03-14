@@ -10,7 +10,7 @@ function HeronsFormula() {
         event.preventDefault();
 
         const a = parseFloat(sideA);
-        const b = parseFloat(sideB);    
+        const b = parseFloat(sideB);
         const c = parseFloat(sideC);
         const area = 1 / 4 * Math.sqrt(4 * a ** 2 * b ** 2 - (a ** 2 + b ** 2 - c ** 2) ** 2);
 

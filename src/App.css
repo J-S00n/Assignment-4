@@ -7,12 +7,10 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* Responsive grid */
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
     margin: 0;
 }
