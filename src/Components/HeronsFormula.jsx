@@ -17,11 +17,11 @@ function HeronsFormula() {
             <h1>Heron's Formula</h1>
             <form id="herons-formula" onSubmit={(event) => { heronsFormula(event) }}>
                 <label htmlFor="herons-side-a">Side A:</label>
-                <input type="number" id="herons-side-a" name="herons-side-a" value={sideA} onChange={(event) => { setSideA(Number(event.target.value)) }} required />
+                <input type="number" id="herons-side-a" name="herons-side-a" value={sideA || ""} onChange={(event) => { setSideA(Number(event.target.value)) }} required />
                 <label htmlFor="herons-side-b">Side B:</label>
-                <input type="number" id="herons-side-b" name="herons-side-b" value={sideB} onChange={(event) => { setSideB(Number(event.target.value)) }} required />
+                <input type="number" id="herons-side-b" name="herons-side-b" value={sideB || ""} onChange={(event) => { setSideB(Number(event.target.value)) }} required />
                 <label htmlFor="herons-side-c">Side C:</label>
-                <input type="number" id="herons-side-c" name="herons-side-c" value={sideC} onChange={(event) => { setSideC(Number(event.target.value)) }} required />
+                <input type="number" id="herons-side-c" name="herons-side-c" value={sideC || ""} onChange={(event) => { setSideC(Number(event.target.value)) }} required />
                 <label htmlFor="result">Area:</label>
                 <input type="text" id="result" name="result" value={result} readOnly />
                 <button type="submit">Calculate</button>

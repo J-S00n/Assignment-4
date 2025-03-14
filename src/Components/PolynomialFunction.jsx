@@ -34,7 +34,7 @@ function PolynomialFunction() {
                 <label htmlFor="exponents">Exponents:</label>
                 <input type="text" id="exponents" name="exponents" value={exponents} onChange={(event) => { setExponents(event.target.value) }} required />
                 <label htmlFor="x-value">x Value:</label>
-                <input type="number" id="x-value" name="x-value" value={xValue} onChange={(event) => { setXValue(event.target.value) }} required />
+                <input type="number" id="x-value" name="x-value" value={xValue || ""} onChange={(event) => { setXValue(event.target.value) }} required />
                 <label htmlFor="result-1">Polynomial Function (Result):</label>
                 <input type="text" id="result-1" name="result-1" value={result1} readOnly />
                 <label htmlFor="result-2">Polynomial Evaluation (Result):</label>

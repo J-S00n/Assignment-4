@@ -26,7 +26,7 @@ function NewtonsMethod() {
             <h1>Newton's Method</h1>
             <form id="newtons-method-form" onSubmit={(event) => { newtonsMethod(event) }}>
                 <label htmlFor="root-guess">Root Guess:</label>
-                <input type="number" id="root-guess" name="root-guess" value={rootGuess} onChange={(event) => { setRootGuess(event.target.value) }} required />
+                <input type="number" id="root-guess" name="root-guess" value={rootGuess || ""} onChange={(event) => { setRootGuess(event.target.value) }} required />
                 <label htmlFor="approx">Root Approximation (Result):</label>
                 <input type="text" id="approx" name="approx" value={approx} readOnly />
                 <button type="submit">Calculate</button>
