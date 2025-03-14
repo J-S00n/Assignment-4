@@ -8,8 +8,17 @@ function HeronsFormula() {
 
     function heronsFormula(event) {
         event.preventDefault();
-        const area = 1 / 4 * Math.sqrt(4 * sideA ** 2 * sideB ** 2 - (sideA ** 2 + sideB ** 2 - sideC ** 2) ** 2);
-        setResult(area);
+
+        const a = parseFloat(sideA);
+        const b = parseFloat(sideB);    
+        const c = parseFloat(sideC);
+        const area = 1 / 4 * Math.sqrt(4 * a ** 2 * b ** 2 - (a ** 2 + b ** 2 - c ** 2) ** 2);
+
+        if (a < 0 || b < 0 || c < 0) {
+            setResult("Invalid input");
+        } else {
+            setResult(area);
+        }
     }
 
     return (

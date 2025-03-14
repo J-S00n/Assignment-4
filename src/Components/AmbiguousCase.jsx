@@ -8,24 +8,27 @@ function AmbiguousCase() {
 
     function ambiguousCaseFormula(event) {
         event.preventDefault();
-        const h = sideB * Math.sin(angleA * Math.PI / 180);
+        const sA = parseFloat(sideA);
+        const sB = parseFloat(sideB);
+        const aA = parseFloat(angleA);
+        const h = sB * Math.sin(aA * Math.PI / 180);
 
-        if (angleA < 0 || angleA > 180 || sideA < 0 || sideB < 0) {
-            setResult("Invalid angle");
-        }else if(angleA < 90) {
-            if (sideA < h) {
+        if (aA < 0 || aA > 180 || sA < 0 || sB < 0) {
+            setResult("No triangle");
+        } else if (aA < 90) {
+            if (sA < h) {
                 setResult("No triangle");
-            } else if (Math.abs(sideA - h) < 0.0001) {
+            } else if (Math.abs(sA - h) < 0.0001) {
                 setResult("Right triangle");
-            } else if (sideA > sideB) {
+            } else if (sA > sB) {
                 setResult("One triangle");
-            } else if (sideA > h && sideA < sideB) {
+            } else if (sA > h && sA < sB) {
                 setResult("Two triangles (ambiguous)");
             }
-        } else if (angleA > 90) {
-            if (sideA < sideB || sideA === sideB) {
+        } else if (aA > 90) {
+            if (sA < sB || sA === sB) {
                 setResult("No triangle");
-            } else if (sideA > sideB) {
+            } else if (sA > sB) {
                 setResult("One triangle");
             }
         } else {
@@ -42,7 +45,7 @@ function AmbiguousCase() {
                 <label htmlFor="amb-case-side-a">Side A:</label>
                 <input type="number" id="amb-case-side-a" name="amb-case-side-a" value={sideA || ""} onChange={(event) => { setSideA(Number(event.target.value)) }} required />
                 <label htmlFor="amb-case-side-b">Side B:</label>
-                <input type="number" id="amb-case-side-b" name="amb-case-side-b" value={sideB|| ""} onChange={(event) => { setSideB(Number(event.target.value)) }} required />
+                <input type="number" id="amb-case-side-b" name="amb-case-side-b" value={sideB || ""} onChange={(event) => { setSideB(Number(event.target.value)) }} required />
                 <label htmlFor="result">Triangle Type (Result):</label>
                 <input type="text" id="result" name="result" value={result} readOnly />
                 <button type="submit">Calculate</button>

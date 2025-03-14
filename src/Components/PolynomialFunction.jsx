@@ -9,20 +9,22 @@ function PolynomialFunction() {
 
     function polynomialFunction(event) {
         event.preventDefault();
+        let parsedCoefficients = coefficients.split(' ').map(Number);
+        let parsedExponents = exponents.split(' ').map(Number);
         let polyFunction = [];
         let functionValue = [];
         let evaluation = 0;
 
-        for (let i = 0; i < coefficients.length; i++) {
-            polyFunction.push(coefficients[i] + "x ^ " + exp[i]);
+        for (let i = 0; i < parsedCoefficients.length; i++) {
+            polyFunction.push(parsedCoefficients[i] + "x ^ " + parsedExponents[i]);
         }
 
-        for (let i = 0; i < coefficients.length; i++) {
-            functionValue.push(coefficients[i] * x ** exp[i]);
+        for (let i = 0; i < parsedCoefficients.length; i++) {
+            functionValue.push(parsedCoefficients[i] * xValue ** parsedExponents[i]);
             evaluation += functionValue[i];
         }
         setResult1("f(x) = " + polyFunction.join(" + "));
-        setResult2("f(" + x + ") = " + evaluation);
+        setResult2("f(" + xValue + ") = " + evaluation);
     }
 
     return (
