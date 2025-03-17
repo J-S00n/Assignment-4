@@ -92,6 +92,11 @@ form button {
     margin-top: 5px;
 }
 
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 600px) {
     .container {
