@@ -92,7 +92,7 @@ form button {
     margin-top: 5px;
 }
 
-.main-container{
+.main-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
