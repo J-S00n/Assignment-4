@@ -24,12 +24,16 @@ function AmbiguousCase() {
                 setResult("One triangle");
             } else if (sA > h && sA < sB) {
                 setResult("Two triangles (ambiguous)");
+            } else {
+                setResult("No triangle");
             }
         } else if (aA > 90) {
             if (sA < sB || sA === sB) {
                 setResult("No triangle");
             } else if (sA > sB) {
                 setResult("One triangle");
+            } else {
+                setResult("No triangle");
             }
         } else {
             setResult("No triangle");

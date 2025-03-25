@@ -9,13 +9,13 @@ function NewtonsMethod() {
         let g = parseFloat(rootGuess);
         let f = 6 * g ** 4 - 13 * g ** 3 - 18 * g ** 2 + 7 * g + 6;
         let fPrime = 24 * g ** 3 - 39 * g ** 2 - 36 * g + 7;
-        let calculatedRoot = g - (f / fPrime);
+        let calculatedRoot = g - f / fPrime;
 
         while (Math.abs(calculatedRoot - g) > 0.0001) {
             g = calculatedRoot;
             f = 6 * g ** 4 - 13 * g ** 3 - 18 * g ** 2 + 7 * g + 6;
             fPrime = 24 * g ** 3 - 39 * g ** 2 - 36 * g + 7;
-            calculatedRoot = g - (f / fPrime);
+            calculatedRoot = g - f / fPrime;
         }
 
         setApprox(calculatedRoot.toFixed(6));
