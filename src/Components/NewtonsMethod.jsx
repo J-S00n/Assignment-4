@@ -17,7 +17,6 @@ function NewtonsMethod() {
             fPrime = 24 * g ** 3 - 39 * g ** 2 - 36 * g + 7;
             calculatedRoot = g - f / fPrime;
         }
-
         setApprox(calculatedRoot.toFixed(6));
     }
 

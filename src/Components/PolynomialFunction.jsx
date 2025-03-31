@@ -44,7 +44,7 @@ function PolynomialFunction() {
                 <button type="submit">Calculate</button>
             </form>
         </div>
-    )
+    );
 }
 
 export default PolynomialFunction;

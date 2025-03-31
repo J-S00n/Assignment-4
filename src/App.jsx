@@ -5,7 +5,6 @@ import NewtonsMethod from './components/NewtonsMethod'
 import PolynomialFunction from './components/PolynomialFunction'
 
 function App() {
-
   return (
     <div className="main-container">
       < AmbiguousCase />
@@ -15,6 +14,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App
