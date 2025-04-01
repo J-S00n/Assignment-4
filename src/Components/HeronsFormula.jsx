@@ -8,7 +8,6 @@ function HeronsFormula() {
 
     function heronsFormula(event) {
         event.preventDefault();
-
         const a = parseFloat(sideA);
         const b = parseFloat(sideB);
         const c = parseFloat(sideC);
